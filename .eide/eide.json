@@ -1,0 +1,86 @@
+{
+  "name": "HC32F448",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    ".eide/deps",
+    "user",
+    "hc32_ll_driver/src",
+    "cmsis/Device/HDSC/hc32f4xx/Source",
+    "bsp/ev_hc32f448_lqfp80",
+    "bsp/components/24cxx",
+    "bsp/components/gt9xx",
+    "bsp/components/nt35510",
+    "bsp/components/tca9539",
+    "bsp/components/w25qxx"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": []
+  },
+  "outDir": "build",
+  "deviceName": "HC32F448KCTI",
+  "packDir": ".pack/HDSC/HC32F448.1.0.1",
+  "miscInfo": {
+    "uid": "814d450d78ff2314578ec8fbeb2efc9c"
+  },
+  "targets": {
+    "Debug": {
+      "excludeList": [
+        "cmsis/Device/HDSC/hc32f4xx/Source/ARM",
+        "cmsis/Device/HDSC/hc32f4xx/Source/IAR",
+        "cmsis/Device/HDSC/hc32f4xx/Source/GCC/linker",
+        "cmsis/Device/HDSC/hc32f4xx/Source/GCC/svd"
+      ],
+      "toolchain": "GCC",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "./cmsis/Device/HDSC/hc32f4xx/Source/GCC/linker/HC32F448xC.ld",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [],
+          "ROM": []
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "null",
+          "cpuName": "null"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          ".eide/deps",
+          "hc32_ll_driver/inc",
+          "cmsis/Include",
+          "cmsis/Device/HDSC/hc32f4xx/Include",
+          "user",
+          "bsp/ev_hc32f448_lqfp80",
+          "bsp/components/24cxx",
+          "bsp/components/gt9xx",
+          "bsp/components/nt35510",
+          "bsp/components/tca9539",
+          "bsp/components/w25qxx"
+        ],
+        "libList": [],
+        "sourceDirList": [],
+        "defineList": [
+          "USE_DDL_DRIVER",
+          "HC32F448"
+        ]
+      }
+    }
+  },
+  "version": "3.3"
+}

@@ -1,0 +1,10 @@
+CompileFlags:
+    Add:
+        - -IF:\App\Scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\c++\13.2.1
+        - -IF:\App\Scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\c++\13.2.1\arm-none-eabi
+        - -IF:\App\Scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\c++\13.2.1\backward
+        - -IF:\App\Scoop\apps\gcc-arm-none-eabi\current\lib\gcc\arm-none-eabi\13.2.1\include
+        - -IF:\App\Scoop\apps\gcc-arm-none-eabi\current\lib\gcc\arm-none-eabi\13.2.1\include-fixed
+        - -IF:\App\Scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include
+    CompilationDatabase: ./build/Debug
+    Compiler: F:\App\Scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-gcc.exe
