@@ -1,6 +1,6 @@
 #====================================================================#
 # Output directory, 输出目录
-OUTPUT_DIR = ../build/Debug
+OUTPUT_DIR = ./build/Debug
 # 生成目标文件
 TARGET = HC32F448KCTI
 # 程序地址
@@ -31,20 +31,20 @@ CFLAGS += -D HC32F448
 
 # hc32f448-flash
 # 链接文件
-CFLAGS += -Wl,-T,../cmsis/Device/HDSC/hc32f4xx/Source/GCC/linker/HC32F448xC.ld
+CFLAGS += -Wl,-T,./cmsis/Device/HDSC/hc32f4xx/Source/GCC/linker/HC32F448xC.ld
 
 #====================================================================#
 # Libraries
 # hc32f448 libraries
-ST_LIB = ../hc32_ll_driver
-BSP_LIB = ../bsp
+ST_LIB = ./hc32_ll_driver
+BSP_LIB = ./bsp
 # CMSIS libraries
-CFLAGS += -I../cmsis/Include
+CFLAGS += -I./cmsis/Include
 # StdPeriph includes
 CFLAGS += -I$(ST_LIB)/inc
-CFLAGS += -I../cmsis/Device/HDSC/hc32f4xx/Include/
+CFLAGS += -I./cmsis/Device/HDSC/hc32f4xx/Include/
 CFLAGS += -I.
-CFLAGS += -I./
+CFLAGS += -I./user
 CFLAGS += -I$(BSP_LIB)/ev_hc32f448_lqfp80
 CFLAGS += -I$(BSP_LIB)/components/24cxx
 CFLAGS += -I$(BSP_LIB)/components/gt9xx
@@ -54,7 +54,7 @@ CFLAGS += -I$(BSP_LIB)/components/w25qxx
 
 #====================================================================#
 # Setup system clock
-SRC = ../cmsis/Device/HDSC/hc32f4xx/Source/system_hc32f448.c
+SRC = ./cmsis/Device/HDSC/hc32f4xx/Source/system_hc32f448.c
 # StdPeriph
 SRC += $(wildcard $(ST_LIB)/src/*.c)
 # BSPPeriph
@@ -66,7 +66,7 @@ SRC += $(wildcard $(BSP_LIB)/components/tca9539/*.c)
 SRC += $(wildcard $(BSP_LIB)/components/w25qxx/*.c)
 
 # # Major programs
-SRC += $(wildcard ./*.c)
+SRC += $(wildcard ./user/*.c)
 # #StdPeriph
 # SRC+=$(ST_LIB)/src/misc.c \
 # 	$(ST_LIB)/src/stm32f10x_rcc.c \
@@ -76,7 +76,7 @@ SRC += $(wildcard ./*.c)
 
 #====================================================================#
 # STM32 startup file
-STARTUP = ../cmsis/Device/HDSC/hc32f4xx/Source/GCC/startup_hc32f448.S
+STARTUP = ./cmsis/Device/HDSC/hc32f4xx/Source/GCC/startup_hc32f448.S
 
 #====================================================================#
 # Make rules
